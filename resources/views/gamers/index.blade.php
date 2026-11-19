@@ -26,9 +26,18 @@
                     </h1>
                 </div>
 
-                <div
-                    class="rounded-xl border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-300">
-                    Gamer Records
+                <div class="flex items-center justify-between mb-6">
+                    <h1 class="text-2xl font-bold text-gray-800">
+                        Gamer Records
+                    </h1>
+
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+
+                        <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700">
+                            Logout
+                        </button>
+                    </form>
                 </div>
             </div>
         </header>
